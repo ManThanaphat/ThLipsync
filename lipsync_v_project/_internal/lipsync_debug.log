@@ -1,0 +1,45 @@
+2025-10-23 21:47:56,676 INFO: === App start ===
+2025-10-23 21:47:56,676 INFO: Resolved BASE_DIR = D:\Mango\KU\Senior Project\lipsync_v_project\_internal
+2025-10-23 21:47:56,676 INFO: MODELS_DIR = D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models
+2025-10-23 21:47:56,676 INFO: MOUTH_SETS_DIR = D:\Mango\KU\Senior Project\lipsync_v_project\_internal\mouth_sets
+2025-10-23 21:47:56,677 INFO: Attempt loading D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models\hmm_A.pkl
+2025-10-23 21:48:07,902 INFO: \u2705 Loaded model: hmm_A.pkl as A
+2025-10-23 21:48:07,902 INFO: Attempt loading D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models\hmm_E.pkl
+2025-10-23 21:48:07,912 INFO: \u2705 Loaded model: hmm_E.pkl as E
+2025-10-23 21:48:07,913 INFO: Attempt loading D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models\hmm_I.pkl
+2025-10-23 21:48:07,924 INFO: \u2705 Loaded model: hmm_I.pkl as I
+2025-10-23 21:48:07,924 INFO: Attempt loading D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models\hmm_O.pkl
+2025-10-23 21:48:07,935 INFO: \u2705 Loaded model: hmm_O.pkl as O
+2025-10-23 21:48:07,935 INFO: Attempt loading D:\Mango\KU\Senior Project\lipsync_v_project\_internal\models\hmm_U.pkl
+2025-10-23 21:48:07,946 INFO: \u2705 Loaded model: hmm_U.pkl as U
+2025-10-23 21:48:07,947 INFO: Found model files:
+2025-10-23 21:48:07,947 INFO:  - hmm_A.pkl
+2025-10-23 21:48:07,947 INFO:  - hmm_E.pkl
+2025-10-23 21:48:07,947 INFO:  - hmm_I.pkl
+2025-10-23 21:48:07,947 INFO:  - hmm_O.pkl
+2025-10-23 21:48:07,947 INFO:  - hmm_U.pkl
+2025-10-23 21:48:07,947 INFO: Loaded model labels: ['A', 'E', 'I', 'O', 'U']
+2025-10-23 21:48:09,569 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,569 DEBUG: STREAM b'IDAT' 41 9154
+2025-10-23 21:48:09,586 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,586 DEBUG: STREAM b'IDAT' 41 9800
+2025-10-23 21:48:09,602 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,603 DEBUG: STREAM b'IDAT' 41 9007
+2025-10-23 21:48:09,620 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,621 DEBUG: STREAM b'IDAT' 41 9522
+2025-10-23 21:48:09,629 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,629 DEBUG: STREAM b'IDAT' 41 7327
+2025-10-23 21:48:09,645 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,645 DEBUG: STREAM b'IDAT' 41 7022
+2025-10-23 21:48:09,660 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,660 DEBUG: STREAM b'IDAT' 41 9225
+2025-10-23 21:48:09,675 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,675 DEBUG: STREAM b'IDAT' 41 8849
+2025-10-23 21:48:09,691 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,691 DEBUG: STREAM b'IDAT' 41 8553
+2025-10-23 21:48:09,706 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,706 DEBUG: STREAM b'IDAT' 41 8048
+2025-10-23 21:48:09,715 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,715 DEBUG: STREAM b'IDAT' 41 6873
+2025-10-23 21:48:09,724 DEBUG: STREAM b'IHDR' 16 13
+2025-10-23 21:48:09,724 DEBUG: STREAM b'IDAT' 41 7307
