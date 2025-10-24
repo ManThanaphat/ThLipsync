@@ -210,9 +210,12 @@ def load_mouth_sets():
                 f = folder / f"{label}.png"
                 if f.exists():
                     try:
-                        imgs[label] = Image.open(f).resize((400,200))
-                    except:
-                        pass
+                        pil = Image.open(f)
+                        # บีบอัดให้ fit 400x200 โดยไม่ยืดผิดสัดส่วน
+                        pil.thumbnail((400,200), Image.LANCZOS)
+                        imgs[label] = pil
+                    except Exception as e:
+                        print(f"Error loading {f}: {e}")
             if imgs:
                 sets[folder.name] = imgs
     return sets
@@ -220,7 +223,7 @@ def load_mouth_sets():
 # ---------------- UI color / style helper ----------------
 PASTEL_BG = "#FFF7FB"       # very light pink cream
 PANEL_BG = "#fff"           # card background white
-ACCENT_1 = "#FFC9DE"        # pastel pink
+ACCENT_1 = "#FFC9DE"        # pastel pinkdef load_mouth_sets():
 ACCENT_2 = "#C7E7FF"        # pastel blue
 ACCENT_3 = "#EAD6FF"        # pastel lavender
 TEXT_MAIN = "#2b2b2b"
@@ -521,16 +524,13 @@ class App:
     def draw_mouth(self, label):
         L = label.upper() if label else "silent"
         imgs = self.mouth_sets.get(self.current_set, {})
+
         if L in imgs:
             pil = imgs[L]
-            pil_rounded = rounded_image(pil, radius=14)
-            return ImageTk.PhotoImage(pil_rounded)
         elif "silent" in imgs:
             pil = imgs["silent"]
-            pil_rounded = rounded_image(pil, radius=14)
-            return ImageTk.PhotoImage(pil_rounded)
         else:
-            # fallback simple drawing
+            # fallback simple rectangle
             fig, ax = plt.subplots(figsize=(4,2))
             ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
             mouth = Rectangle((0.35,0.48), 0.3, 0.02)
@@ -540,9 +540,13 @@ class App:
             plt.savefig(buf, format="png", bbox_inches="tight", dpi=80)
             plt.close(fig)
             buf.seek(0)
-            pil = Image.open(buf).resize((400,200))
-            pil_rounded = rounded_image(pil, radius=14)
-            return ImageTk.PhotoImage(pil_rounded)
+            pil = Image.open(buf)
+            pil.thumbnail((400,200), Image.LANCZOS)
+
+        # ทำ rounded corner
+        pil_rounded = rounded_image(pil, radius=14)
+        return ImageTk.PhotoImage(pil_rounded)
+
 
     def change_set(self, event=None):
         self.current_set = self.combo_set.get()
